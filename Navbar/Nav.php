@@ -22,7 +22,7 @@
                 <div class="hidden lg:flex gap-2">
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">See</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
+                    <a href="Explore.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                 </div>
@@ -34,7 +34,7 @@
             <div class="mobile-menu flex-col gap-2 p-4 hidden lg:hidden" id="mobile-menu">
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">See</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
+                    <a href="Explore.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                     <a href="Login.php" class="text-white bg-[#FF1D8D] hover:text-white px-3 py-2 rounded w-16" >Login</a>
