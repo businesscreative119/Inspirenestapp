@@ -15,16 +15,16 @@
                     <h5 class="text-[#FF1D8D] mb-6 text-xl font-bold">InspireNest</h5>
                     <!-- Add any content here -->
                     <div class="flex gap-7 mt-4 text-zinc-100">
-                        <a href="https://www.facebook.com" class="hover:underline text-white">
+                        <a href="https://www.facebook.com/rajan.maurya.5876/" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="" style="width:18px; height:18px"/>
                         </a>
-                        <a href="https://www.instagram.com" class="hover:underline text-white">
+                        <a href="https://www.instagram.com/developer24h/" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/4138/4138124.png" alt="" style="width:18px; height:18px"/>
                         </a>
                         <a href="https://x.com/" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="" style="width:18px; height:18px"/>
                         </a>
-                        <a href="https://www.whatsapp.com" class="hover:underline text-white">
+                        <a href="https://wa.me/6387841012text=Hello%20there!" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="" style="width:18px; height:18px"/>
                         </a>
                     </div>
