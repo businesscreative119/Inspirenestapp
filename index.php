@@ -23,20 +23,7 @@
         transform: translateY(0);
       }
     </style>
-      <style>
-    .scroll-indicator {
-      animation: scrollTop 2s linear infinite;
-    }
-
-    @keyframes scrollTop {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-100%);
-      }
-    }
-  </style>
+ 
 </head>
 <body class="bg-gray-900 text-white">
 <?php include "Navbar/Nav.php"; ?>
@@ -49,19 +36,6 @@
         <button class="bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded animate">Get Started</button>
     </div>
 </header>
-
-<div class="relative h-64 w-16 bg-gray-300 overflow-hidden flex flex-col justify-between">
-    <div class="text-xs text-center p-1">Scrolling Text</div>
-    <div class="absolute w-full h-full flex flex-col justify-between items-center scroll-indicator">
-      <div class="text-xs text-center p-1">Scrolling Text</div>
-      <div class="flex flex-col items-center space-y-1 mb-2">
-        <img src="https://via.placeholder.com/50" alt="Indicator Image 1" class="w-8 h-8">
-        <img src="https://via.placeholder.com/50" alt="Indicator Image 2" class="w-8 h-8">
-        <img src="https://via.placeholder.com/50" alt="Indicator Image 3" class="w-8 h-8">
-      </div>
-    </div>
-  </div>
-
 
 
 <!-- Trust Section -->
