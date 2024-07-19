@@ -24,24 +24,19 @@
       }
     </style>
       <style>
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-        }
+    .scroll-indicator {
+      animation: scrollTop 2s linear infinite;
+    }
 
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-    </style>
+    @keyframes scrollTop {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white">
 <?php include "Navbar/Nav.php"; ?>
@@ -55,20 +50,17 @@
     </div>
 </header>
 
-<div class="carousel-container">
-    <div class="flex justify-center mt-4">
-        <button onclick="moveSlide(0)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
-        <button onclick="moveSlide(1)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
-        <button onclick="moveSlide(2)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+<div class="relative h-64 w-16 bg-gray-300 overflow-hidden flex flex-col justify-between">
+    <div class="text-xs text-center p-1">Scrolling Text</div>
+    <div class="absolute w-full h-full flex flex-col justify-between items-center scroll-indicator">
+      <div class="text-xs text-center p-1">Scrolling Text</div>
+      <div class="flex flex-col items-center space-y-1 mb-2">
+        <img src="https://via.placeholder.com/50" alt="Indicator Image 1" class="w-8 h-8">
+        <img src="https://via.placeholder.com/50" alt="Indicator Image 2" class="w-8 h-8">
+        <img src="https://via.placeholder.com/50" alt="Indicator Image 3" class="w-8 h-8">
+      </div>
     </div>
-        <div id="carousel" class="carousel-slide">
-            <img src="image1.jpg" alt="Image 1" class="carousel-item">
-            <img src="image2.jpg" alt="Image 2" class="carousel-item">
-            <img src="image3.jpg" alt="Image 3" class="carousel-item">
-        </div>
-    </div>
-
-
+  </div>
 
 
 
