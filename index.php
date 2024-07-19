@@ -23,14 +23,50 @@
         transform: translateY(0);
       }
     </style>
+      <style>
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white">
 <?php include "Navbar/Nav.php"; ?>
 
+
+<div class="carousel-container">
+        <div id="carousel" class="carousel-slide">
+            <img src="image1.jpg" alt="Image 1" class="carousel-item">
+            <img src="image2.jpg" alt="Image 2" class="carousel-item">
+            <img src="image3.jpg" alt="Image 3" class="carousel-item">
+        </div>
+        <div class="flex justify-center mt-4">
+            <button onclick="moveSlide(0)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+            <button onclick="moveSlide(1)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+            <button onclick="moveSlide(2)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+        </div>
+    </div>
+
+
+
+
 <!-- Header Section -->
 <header class="text-center p-10 ">
-    <h1 class="text-3xl md:text-4xl font-bold animate">The premium images for you</h1>
-    <p class="mt-4 text-sm md:text-base animate">Choosing the X metal card means pushing back the limits and payment constraints, even abroad.</p>
+    <h1 class="text-3xl md:text-4xl font-bold animate">Discover your next</h1>
+    <p class="mt-4 text-sm md:text-base animate"> 1_Find inspiration for your next chai time snacks  , 2_Explore new outfit inspirations, 3_</p>
     <div class="mt-6">
         <button class="bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded animate">Get Started</button>
     </div>
@@ -187,5 +223,18 @@
     });
   });
 </script>
+
+<script>
+        const carousel = document.getElementById('carousel');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+
+        function moveSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+            indicators[currentIndex].classList.remove('bg-gray-800');
+            indicators[index].classList.add('bg-gray-800');
+            currentIndex = index;
+        }
+    </script>
 </body>
 </html>
