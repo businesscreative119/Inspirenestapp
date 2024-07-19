@@ -18,7 +18,7 @@
                     </svg>
                 </button>
                 <div class="logo">
-                    <h1 class="text-xl font-bold text-[#FF1D8D]">InspireNest</h1>
+                    <h1 class="text-xl font-bold text-rose-500">InspireNest</h1>
                 </div>
                 <div class="hidden lg:flex gap-2">
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
@@ -28,7 +28,7 @@
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                 </div>
                 <div class="hidden lg:flex gap-4">
-                    <a href="Login.php" class="text-white bg-[#FF1D8D] hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">LogIn</a>
+                    <a href="Login.php" class="text-white bg-rose-500 hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">LogIn</a>
                     <a href="register.php" class="text-white bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">SignUp</a>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                     <a href="Explore.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
-                    <a href="Login.php" class="text-white bg-[#FF1D8D] hover:text-white px-3 py-2 rounded w-16" >Login</a>
+                    <a href="Login.php" class="text-white bg-rose-500 hover:text-white px-3 py-2 rounded w-16" >Login</a>
                     <a href="register.php" class="text-white bg-gray-800 hover:text-teal-600 px-3 py-2 rounded w-16" >SignUp</a>
             </div>
         </div>
