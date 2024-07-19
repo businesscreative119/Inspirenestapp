@@ -18,7 +18,7 @@
                     </svg>
                 </button>
                 <div class="logo">
-                    <h1 class="text-xl font-bold text-rose-500">InspireNest</h1>
+                    <h1 class="text-xl font-bold text-rose-900">InspireNest</h1>
                 </div>
                 <div class="hidden lg:flex gap-2">
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
