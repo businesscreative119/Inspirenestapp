@@ -164,9 +164,6 @@
 <section class="mt-16 bg-gray-800 p-6 md:p-10 rounded-lg text-center animate">
     <h2 class="animate ext-2xl md:text-3xl font-bold animate">Join InspireNest to bring your ideas to life</h2>
     <p class="animate mt-4 text-sm md:text-base animate">Sign up to get your ideas off the ground with InspireNest, where creativity meets community and innovation thrives.</p>
-    <div class="mt-6">
-        <button class=" animate bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded">MORE</button>
-    </div>
 </section>
 <?php include "footer.php"; ?>
 
