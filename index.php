@@ -56,15 +56,15 @@
 </header>
 
 <div class="carousel-container">
+    <div class="flex justify-center mt-4">
+        <button onclick="moveSlide(0)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+        <button onclick="moveSlide(1)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+        <button onclick="moveSlide(2)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
+    </div>
         <div id="carousel" class="carousel-slide">
             <img src="image1.jpg" alt="Image 1" class="carousel-item">
             <img src="image2.jpg" alt="Image 2" class="carousel-item">
             <img src="image3.jpg" alt="Image 3" class="carousel-item">
-        </div>
-        <div class="flex justify-center mt-4">
-            <button onclick="moveSlide(0)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
-            <button onclick="moveSlide(1)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
-            <button onclick="moveSlide(2)" class="indicator w-3 h-3 bg-gray-500 rounded-full mx-2"></button>
         </div>
     </div>
 
