@@ -39,7 +39,7 @@
     </header>
 
     <!-- Categories Section -->
-    <section class="mb-10 items-center">
+    <section class="mb-10 items-center mr-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <div class="category-card">
           <img src="https://i.pinimg.com/564x/3d/0c/7a/3d0c7a7b81f0335f953a6c198de21411.jpg" alt="Shipping Container House" class="w-full h-48 object-cover">
