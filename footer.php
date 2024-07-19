@@ -24,7 +24,7 @@
                         <a href="https://x.com/" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="" style="width:18px; height:18px"/>
                         </a>
-                        <a href="https://wa.me/6387841012text=Hello%20there!" class="hover:underline text-white">
+                        <a href="https://wa.me/916387841012?text=Hello%20there!" class="hover:underline text-white">
                             <img src="https://cdn-icons-png.flaticon.com/128/733/733585.png" alt="" style="width:18px; height:18px"/>
                         </a>
                     </div>
