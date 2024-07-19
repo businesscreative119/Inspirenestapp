@@ -142,28 +142,28 @@
 
 <!-- Testimonials Section -->
 <section class="mt-16 ">
-    <h2 class="text-2xl md:text-3xl font-bold text-center animate">just like you</h2>
-    <p class="text-center mt-4 text-sm md:text-base animate">For those who want more from their money — there’s savvy.</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-center animate">Elevate your idea</h2>
+    <p class="text-center mt-4 text-sm md:text-base animate">Experience a community where creativity and innovation thrive.</p>
     <div class="animate grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-6 md:px-10">
         <div class="bg-gray-800 p-6 rounded-lg text-center">
             <p class="italic text-sm md:text-base animate">"The experience was very conclusive and enjoyable, very efficient and pleasant."</p>
-            <p class="mt-4 font-bold">Kurt Bates</p>
+            <p class="mt-4 font-bold">Ayushi</p>
         </div>
         <div class=" animate bg-gray-800 p-6 rounded-lg text-center animate">
-            <p class="italic text-sm md:text-base">"Personalized service and an outstanding product. Great design, but for collaboration, I highly recommend it."</p>
-            <p class="mt-4 font-bold animate">Jayed Khan</p>
+            <p class="italic text-sm md:text-base">"Personalized  and an outstanding product. Great design, but for collaboration, I highly recommend it."</p>
+            <p class="mt-4 font-bold animate">Vikash kumar</p>
         </div>
         <div class="animate bg-gray-800 p-6 rounded-lg text-center animate">
-            <p class="italic text-sm md:text-base animate">"I've been using it for months. It's a great addition to my financial toolkit, and the pricing plan is affordable. Thank you, Affirm!"</p>
-            <p class="mt-4 font-bold animate">Judith Rodriguez</p>
+            <p class="italic text-sm md:text-base animate">"I've been using it for months. It's a great addition to my Design toolkit, and the pricing plan is affordable."</p>
+            <p class="mt-4 font-bold animate">Lucky Mishra</p>
         </div>
     </div>
 </section>
 
 <!-- Call to Action Section -->
 <section class="mt-16 bg-gray-800 p-6 md:p-10 rounded-lg text-center animate">
-    <h2 class="animate ext-2xl md:text-3xl font-bold animate">Open your account today & get our best services</h2>
-    <p class="animate mt-4 text-sm md:text-base animate">Convinced by the advantages of the X card? Open your account in 10 minutes. Order your card in a flash.</p>
+    <h2 class="animate ext-2xl md:text-3xl font-bold animate">Join InspireNest to bring your ideas to life</h2>
+    <p class="animate mt-4 text-sm md:text-base animate">Sign up to get your ideas off the ground with InspireNest, where creativity meets community and innovation thrives.</p>
     <div class="mt-6">
         <button class=" animate bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded">MORE</button>
     </div>
