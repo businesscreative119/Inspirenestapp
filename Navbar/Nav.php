@@ -28,7 +28,7 @@
                     <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                 </div>
                 <div class="hidden lg:flex gap-4">
-                    <a href="Login.php" class="text-white bg-rose-500 hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">LogIn</a>
+                    <a href="Login.php" class="text-white bg-gray-800 text-gray-800 hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">LogIn</a>
                     <a href="register.php" class="text-white bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">SignUp</a>
                 </div>
             </div>
