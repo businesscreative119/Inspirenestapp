@@ -11,17 +11,25 @@
         text-align: left;
         text:white;
       }
+      <style>
+        .blur-image {
+            filter: blur(5px);
+        }
 
-      .animate {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.5s ease-out;
-      }
+        .animate-text-up {
+            animation: text-up 1s forwards;
+        }
 
-      .animate-show {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        @keyframes text-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
  
 </head>
@@ -36,6 +44,43 @@
         <button class="bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded animate">Get Started</button>
     </div>
 </header>
+
+
+<div class="relative w-64 p-4 bg-white rounded-lg shadow-lg">
+        <div id="images-container" class="absolute right-4 top-4 space-y-4"></div>
+        <div id="texts-container" class="mt-4 text-gray-800 space-y-2"></div>
+    </div>
+    <script>
+        const images = [
+            { src: 'path-to-your-image1.jpg', text: 'First animated text' },
+            { src: 'path-to-your-image2.jpg', text: 'Second animated text' },
+            { src: 'path-to-your-image3.jpg', text: 'Third animated text' },
+        ];
+
+        const imagesContainer = document.getElementById('images-container');
+        const textsContainer = document.getElementById('texts-container');
+
+        function animateItems() {
+            images.forEach((item, index) => {
+                // Add image
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.alt = `Image ${index + 1}`;
+                img.className = 'w-16 h-16 blur-image rounded-full';
+                imagesContainer.appendChild(img);
+
+                // Add text with animation
+                const textDiv = document.createElement('div');
+                textDiv.textContent = item.text;
+                textDiv.className = 'animate-text-up';
+                textDiv.style.animationDelay = `${index * 0.5}s`; // Delay for each text
+                textsContainer.appendChild(textDiv);
+            });
+        }
+
+        // Simulate a delay before showing the text animation
+        setTimeout(animateItems, 1000);
+    </script>
 
 
 <!-- Trust Section -->
