@@ -15,8 +15,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             </div>
     </main>
+    
     <script>
-        const container = document.querySelector('.grid');
+ const container = document.querySelector('.grid');
 const pins = [
     {
         type: 'video',
@@ -39,14 +40,7 @@ const pins = [
         autoplay: true, // Set autoplay for videos
         muted: true, // Mute videos by default (optional)
     },
-    {
-        type: 'video',
-        url: 'https://www.youtube.com/watch?v=coUY1kd8xFk', // Replace with a real video URL
-        title: 'BOLD COLORS 12K HDR Video ULTRA HD 240 FPS - Dolby Vision',
-        autoplay: true, // Set autoplay for videos
-        muted: true, // Mute videos by default (optional)
-    },
-    // Add more pin objects as needed...
+   
 ];
 
 function createPin(pin) {
@@ -67,7 +61,13 @@ function createPin(pin) {
         videoElement.src = pin.url;
         videoElement.autoplay = pin.autoplay;
         videoElement.muted = pin.muted; // Optional for muted videos
-        contentElement.appendChild(videoElement);
+
+        // **Crucial for autoplay:**
+        // Wait for the video metadata to be loaded before playing.
+        // This ensures the video is ready and avoids potential errors.
+        videoElement.addEventListener('loadedmetadata', () => {
+            videoElement.play();
+        });
     }
 
     const titleElement = document.createElement('h3');
