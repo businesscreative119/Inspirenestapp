@@ -45,7 +45,7 @@
 <?php include "Navbar/Nav.php"; ?>
 
 <!-- Main container -->
-<div class="container mx-auto text-center py-10">
+<div class="container mx-auto text-center py-10 mt-10">
     <!-- Headings -->
     <h1 class="text-4xl text-black font-bold mb-2 animate">Discover your next</h1>
     <h2 class="text-3xl text-yellow-600 mb-10 animate">Explore new outfit inspirations</h2>
