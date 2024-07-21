@@ -117,7 +117,7 @@
         <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card animate" style="background-image: url('https://images.unsplash.com/photo-1721116858340-d955652c2fc8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
       </div>
     </div>
-</div>
+
 
 <?php include "footer.php"; ?>
 
