@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Watch</title>
+    <style>
+    /* Custom styles for shadow and other effects */
+    .image-card {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .indicator-dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: gray;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .active {
+      background-color:#FF1D8D;
+    }
+    .animate {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.7s ease-out;
+      }
+
+      .animate-show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  </style>
 </head>
 <body>
+<?php include "Navbar/Nav.php"; ?>
      <!-- Image grid -->
      <div class="flex justify-center space-x-4 overflow-x-auto px-4">
      <!-- Example Image Cards -->
@@ -88,5 +118,28 @@
       </div>
     </div>
 </div>
+
+<?php include "footer.php"; ?>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 </body>
 </html>
