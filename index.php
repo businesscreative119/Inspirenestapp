@@ -31,13 +31,13 @@
   </style>
  
 </head>
-<body class="bg-gray-900 text-white">
+<body class=" text-white">
 <?php include "Navbar/Nav.php"; ?>
 
 <!-- Main container -->
 <div class="container mx-auto text-center py-10">
     <!-- Headings -->
-    <h1 class="text-4xl font-bold mb-2">Discover your next</h1>
+    <h1 class="text-4xl text-black font-bold mb-2">Discover your next</h1>
     <h2 class="text-3xl text-yellow-600 mb-10">1_Find inspiration for your next chai time snacks </h2>
     <h2 class="text-3xl text-yellow-600 mb-10">2_Explore new outfit inspirations</h2>
     
