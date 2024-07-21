@@ -89,7 +89,7 @@
     </div>
     
     <!-- Button -->
-    <div class="mt-4">
+    <div class="mt-10">
       <button class="px-4 py-2 bg-yellow-600 text-white rounded-full">Here's how it works</button>
     </div>
   </div>
