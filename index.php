@@ -31,7 +31,7 @@
     .animate {
         opacity: 0;
         transform: translateY(50px);
-        transition: all 0.5s ease-out;
+        transition: all 0.7s ease-out;
       }
 
       .animate-show {
