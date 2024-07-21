@@ -19,14 +19,30 @@
         const container = document.querySelector('.grid');
 const pins = [
     {
-        type: 'image',
-        url: 'https://picsum.photos/id/237/200/300',
-        title: 'Inspiring Sunset',
+        type: 'video',
+        url: 'https://www.youtube.com/watch?v=coUY1kd8xFk', // Replace with a real video URL
+        title: 'BOLD COLORS 12K HDR Video ULTRA HD 240 FPS - Dolby Vision',
+        autoplay: true, // Set autoplay for videos
+        muted: true, // Mute videos by default (optional)
     },
     {
         type: 'video',
-        url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Replace with a real video URL
-        title: 'Uplifting Music',
+        url: 'https://www.youtube.com/watch?v=coUY1kd8xFk', // Replace with a real video URL
+        title: 'BOLD COLORS 12K HDR Video ULTRA HD 240 FPS - Dolby Vision',
+        autoplay: true, // Set autoplay for videos
+        muted: true, // Mute videos by default (optional)
+    },
+    {
+        type: 'video',
+        url: 'https://www.youtube.com/watch?v=coUY1kd8xFk', // Replace with a real video URL
+        title: 'BOLD COLORS 12K HDR Video ULTRA HD 240 FPS - Dolby Vision',
+        autoplay: true, // Set autoplay for videos
+        muted: true, // Mute videos by default (optional)
+    },
+    {
+        type: 'video',
+        url: 'https://www.youtube.com/watch?v=coUY1kd8xFk', // Replace with a real video URL
+        title: 'BOLD COLORS 12K HDR Video ULTRA HD 240 FPS - Dolby Vision',
         autoplay: true, // Set autoplay for videos
         muted: true, // Mute videos by default (optional)
     },
