@@ -93,28 +93,6 @@
       <button class="px-4 py-2 bg-yellow-600 text-white rounded-full">Here's how it works</button>
     </div>
   </div>
-
-
-
-<!-- Trust Section -->
-<section class="text-center mt-10 ">
-    <p class="text-lg md:text-xl animate">+450,000 companies trust us</p>
-    <div class="flex flex-col md:flex-row justify-center mt-4 space-y-4 md:space-y-0 md:space-x-8">
-        <div class="mx-4 animate">
-            <span class="text-xl md:text-2xl font-bold">4.7</span>
-            <span class="block">On App Store</span>
-        </div>
-        <div class="mx-4 animate">
-            <span class="text-xl md:text-2xl font-bold">4.5</span>
-            <span class="block">On Play Store</span>
-        </div>
-        <div class="mx-4 animate">
-            <span class="text-xl md:text-2xl font-bold">4.6</span>
-            <span class="block">On Trustpilot</span>
-        </div>
-    </div>
-</section>
-
 <!-- first Advantages Section -->
 <section class="mt-16 bg-[#FEFD97] p-6 md:p-10 ">
     <h2 class="text-2xl text-[#FF1D8D] md:text-3xl font-bold text-center">Search for an idea</h2>
