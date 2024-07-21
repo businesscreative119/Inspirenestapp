@@ -11,6 +11,7 @@
         text-align: left;
         text:white;
       }
+    </style>
  
 </head>
 <body class="bg-gray-900 text-white">
