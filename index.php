@@ -12,6 +12,23 @@
         text:white;
       }
     </style>
+    <style>
+    /* Custom styles for shadow and other effects */
+    .image-card {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .indicator-dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: gray;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .active {
+      background-color: yellow;
+    }
+  </style>
  
 </head>
 <body class="bg-gray-900 text-white">
@@ -25,6 +42,60 @@
         <button class="bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded animate">Get Started</button>
     </div>
 </header>
+
+
+<!-- Main container -->
+<div class="container mx-auto text-center py-10">
+    <!-- Headings -->
+    <h1 class="text-4xl font-bold mb-2">Get your next</h1>
+    <h2 class="text-3xl text-yellow-600 mb-10">1 chai time snacks idea</h2>
+    <h2 class="text-3xl text-yellow-600 mb-10">2 chai time snacks idea</h2>
+    <h2 class="text-3xl text-yellow-600 mb-10">3 chai time snacks idea</h2>
+    
+    <!-- Indicator -->
+    <div class="flex justify-center mb-6">
+      <span class="indicator-dot active"></span>
+      <span class="indicator-dot"></span>
+      <span class="indicator-dot"></span>
+      <span class="indicator-dot"></span>
+    </div>
+
+    <!-- Image grid -->
+    <div class="flex justify-center space-x-4 overflow-x-auto px-4">
+      <!-- Example Image Cards -->
+      <div class="flex flex-col space-y-4">
+        <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image1.jpg');"></div>
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image2.jpg');"></div>
+        <div class="w-40 h-32 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image3.jpg');"></div>
+      </div>
+      <div class="flex flex-col space-y-4 mt-20">
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image4.jpg');"></div>
+        <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image5.jpg');"></div>
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image6.jpg');"></div>
+      </div>
+      <div class="flex flex-col space-y-4 mt-32">
+        <div class="w-40 h-32 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image7.jpg');"></div>
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image8.jpg');"></div>
+        <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image9.jpg');"></div>
+      </div>
+      <div class="flex flex-col space-y-4 mt-20">
+        <div class="w-40 h-32 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image7.jpg');"></div>
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image8.jpg');"></div>
+        <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image9.jpg');"></div>
+      </div>
+      <div class="flex flex-col space-y-4">
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image10.jpg');"></div>
+        <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image11.jpg');"></div>
+        <div class="w-40 h-40 bg-cover bg-center rounded-lg image-card" style="background-image: url('https://example.com/image12.jpg');"></div>
+      </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="mt-10">
+      <button class="px-4 py-2 bg-yellow-600 text-white rounded-full">Here's how it works</button>
+    </div>
+  </div>
+
 
 
 <!-- Trust Section -->
@@ -179,17 +250,5 @@
   });
 </script>
 
-<script>
-        const carousel = document.getElementById('carousel');
-        const indicators = document.querySelectorAll('.indicator');
-        let currentIndex = 0;
-
-        function moveSlide(index) {
-            carousel.style.transform = `translateX(-${index * 100}%)`;
-            indicators[currentIndex].classList.remove('bg-gray-800');
-            indicators[index].classList.add('bg-gray-800');
-            currentIndex = index;
-        }
-    </script>
 </body>
 </html>
