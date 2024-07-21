@@ -37,7 +37,7 @@
 <body>
 <?php include "Navbar/Nav.php"; ?>
      <!-- Image grid -->
-     <div class="flex justify-center space-x-4 overflow-x-auto px-4">
+     <div class="flex justify-center space-x-4 overflow-x-auto px-4 mt-10">
      <!-- Example Image Cards -->
      <div id="section1" class="flex flex-col space-y-4 ">
         <div class="w-40 h-56 bg-cover bg-center rounded-lg image-card animate" style="background-image: url('https://images.unsplash.com/photo-1573548500833-02035bc24fb6?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
