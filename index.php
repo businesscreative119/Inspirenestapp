@@ -34,23 +34,12 @@
 <body class="bg-gray-900 text-white">
 <?php include "Navbar/Nav.php"; ?>
 
-<!-- Header Section -->
-<header class="text-center p-10 ">
-    <h1 class="text-3xl md:text-4xl font-bold animate">Discover your next</h1>
-    <p class="mt-4 text-sm md:text-base animate"> 1_Find inspiration for your next chai time snacks  , 2_Explore new outfit inspirations, 3_</p>
-    <div class="mt-6">
-        <button class="bg-[#FF1D8D] text-white font-bold py-2 px-4 rounded animate">Get Started</button>
-    </div>
-</header>
-
-
 <!-- Main container -->
 <div class="container mx-auto text-center py-10">
     <!-- Headings -->
-    <h1 class="text-4xl font-bold mb-2">Get your next</h1>
-    <h2 class="text-3xl text-yellow-600 mb-10">1 chai time snacks idea</h2>
-    <h2 class="text-3xl text-yellow-600 mb-10">2 chai time snacks idea</h2>
-    <h2 class="text-3xl text-yellow-600 mb-10">3 chai time snacks idea</h2>
+    <h1 class="text-4xl font-bold mb-2">Discover your next</h1>
+    <h2 class="text-3xl text-yellow-600 mb-10">1_Find inspiration for your next chai time snacks </h2>
+    <h2 class="text-3xl text-yellow-600 mb-10">2_Explore new outfit inspirations</h2>
     
     <!-- Indicator -->
     <div class="flex justify-center mb-6">
