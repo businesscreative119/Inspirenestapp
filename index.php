@@ -26,7 +26,7 @@
       display: inline-block;
     }
     .active {
-      background-color: yellow;
+      background-color:#FF1D8D;
     }
   </style>
  
