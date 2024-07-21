@@ -51,12 +51,12 @@
     <h2 class="text-3xl text-yellow-600 mb-10 animate">Explore new outfit inspirations</h2>
     
     <!-- Indicator -->
-    <div class="flex justify-center mb-6">
+    <!-- <div class="flex justify-center mb-6">
       <span class="indicator-dot active"></span>
       <span class="indicator-dot"></span>
       <span class="indicator-dot"></span>
       <span class="indicator-dot"></span>
-    </div>
+    </div> -->
 
     <!-- Image grid -->
     <div class="flex justify-center space-x-4 overflow-x-auto px-4">
