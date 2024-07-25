@@ -120,9 +120,7 @@ $result = $conn->query($sql);
         <button id="toggleSidebar" class="text-gray-600 text-black px-4 py-2 rounded mb-6 flex items-center">
             <i class="fas fa-bars mr-2"></i> 
         </button>
-        <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
-            <i class="fas fa-plus mr-2"></i> Add New User
-        </button>
+      
 
         <!-- Create User Form Modal -->
         <div id="userModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
@@ -154,7 +152,10 @@ $result = $conn->query($sql);
                 </form>
             </div>
         </div>
-
+        
+        <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
+            <i class="fas fa-plus mr-2"></i> Add New User
+        </button>
         <!-- Update User Form -->
         <?php if (isset($_GET['edit'])):
             $id = $_GET['edit'];
