@@ -83,7 +83,7 @@ $result = $conn->query($sql);
                         $photo = htmlspecialchars($row['photo']);
                         echo "
                         <div class='bg-gray-100 p-4 rounded-lg shadow-md'>
-                            <img src='" . $ProfilePhoto . "' alt='User Photo' class='w-16 h-16 rounded-full mb-2'>
+                            <img src='" .base64_encode($row['ProfilePhoto']) . "' alt='User Photo' class='w-16 h-16 rounded-full mb-2'>
                             <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
