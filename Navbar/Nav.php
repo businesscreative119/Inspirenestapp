@@ -39,7 +39,7 @@
                     <a href="Business.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
                     <a href="News.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                     <a href="Login.php" class="text-white bg-[#FF1D8D] hover:text-white px-3 py-2 rounded w-16" >Login</a>
-                    <a href="register.php" class="text-white bg-gray-800 hover:text-teal-600 px-3 py-2 rounded w-17" >SignUp</a>
+                    <a href="register.php" class="text-white bg-gray-800 hover:text-teal-600 px-3 py-2 rounded w-16.5" >SignUp</a>
             </div>
         </div>
     </nav>
