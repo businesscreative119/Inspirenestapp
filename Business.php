@@ -12,7 +12,7 @@
     <div class="min-h-screen p-4 md:p-8">
         <div class="max-w-4xl mx-auto p-6 rounded-lg ">
             <div class="mb-6">
-                <h1 class="text-4xl font-bold mb-2 text-center">Grow Your Business on Pinterest</h1>
+                <h1 class="text-4xl font-bold mb-2 text-center">Grow Your Business on InspireNest</h1>
                 <p class="text-gray-700 mb-4 text-center">InspireNest is where people shop, plan, and discover new ideas. With InspireNest ads, you can reach your audience at every stage of the consumer journey. Sign up for a free business account to access ads and other marketing tools.</p>
                 <div class="flex justify-center">
                     <a href="#" class="bg-indigo-500 text-white py-2 px-4 rounded-lg font-bold hover:bg-indigo-600">Sign up</a>
