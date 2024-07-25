@@ -99,6 +99,7 @@ $result = $conn->query($sql);
             border-radius: 0.5rem;
             max-width: 500px;
             width: 100%;
+            position: relative;
         }
     </style>
 </head>
@@ -154,7 +155,10 @@ $result = $conn->query($sql);
                         <label class="block text-gray-700">Password</label>
                         <input type="password" name="password" class="w-full px-3 py-2 border rounded" required>
                     </div>
-                    <button type="submit" name="create" class="bg-blue-500 text-white px-3 py-2 rounded">Create</button>
+                    <div class="flex justify-between">
+                        <button type="submit" name="create" class="bg-blue-500 text-white px-4 py-2 rounded">Create</button>
+                        <button type="button" id="cancelModal" class="bg-gray-300 text-gray-800 px-4 py-2 rounded">Cancel</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -241,6 +245,11 @@ $result = $conn->query($sql);
         if (event.target === document.getElementById('userModal')) {
             document.getElementById('userModal').classList.add('hidden');
         }
+    });
+
+    // Cancel button functionality
+    document.getElementById('cancelModal').addEventListener('click', function() {
+        document.getElementById('userModal').classList.add('hidden');
     });
 </script>
 
