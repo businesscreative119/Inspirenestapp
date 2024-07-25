@@ -1,9 +1,10 @@
 <?php
+session_start(); // Ensure session is started
+
 include("./php/config.php");
 
-
-if(!isset($_SESSION['valid'])){
-    header("Location: /AdminLogin");
+if (!isset($_SESSION['valid'])) {
+    header("Location: Admin/AdminLogin.php");
     exit();
 }
 
@@ -22,8 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $age = $_POST['age'];
-    // $password = $_POST['password'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users (Username, Email, Age, password) VALUES ('$username', '$email', '$age', '$password')";
     if ($conn->query($sql) === TRUE) {
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $age = $_POST['age'];
-    $password = $_POST['password'] ? password_hash($_POST['password'], PASSWORD_DEFAULT) : $_POST['current_password']; // Hash the password if provided, otherwise keep the current one
+    $password = $_POST['password'] ? password_hash($_POST['password'], PASSWORD_DEFAULT) : $_POST['current_password'];
 
     $sql = "UPDATE users SET Username='$username', Email='$email', Age='$age', password='$password' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
