@@ -3,7 +3,7 @@ include("./php/config.php");
 
 
 if(!isset($_SESSION['valid'])){
-    header("Location: Login.php");
+    header("Location: Home.php");
     exit();
 }
 
@@ -22,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $age = $_POST['age'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+    $password = $_POST['password'];
+    // $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
 
     $sql = "INSERT INTO users (Username, Email, Age, password) VALUES ('$username', '$email', '$age', '$password')";
     if ($conn->query($sql) === TRUE) {
