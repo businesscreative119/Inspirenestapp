@@ -193,7 +193,7 @@ $result = $conn->query($sql);
         <!-- Display Users -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
             <div class="px-6 py-4 border-b border-gray-200">
-                <h2 class="text-xl font-semibold text-gray-800">Users List</h2>
+                <h2 class="text-xl font-semibold text-gray-800">Admin Action</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <?php
