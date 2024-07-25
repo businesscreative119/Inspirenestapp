@@ -24,8 +24,8 @@
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
                     <a href="Watch.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Watch</a>
                     <a href="Explore.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
+                    <a href="Business.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
+                    <a href="News.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                 </div>
                 <div class="hidden lg:flex gap-4">
                     <a href="Login.php" class="text-white bg-[#FF1D8D] hover:bg-gray-600 px-4 py-2 rounded-full flex items-center text-sm">LogIn</a>
@@ -36,14 +36,13 @@
                     <a href="index.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Today</a>
                     <a href="Watch.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Watch</a>
                     <a href="Explore.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Explore</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
-                    <a href="#" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
+                    <a href="Business.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">Business</a>
+                    <a href="News.php" class="text-gray-800 hover:text-teal-600 px-3 py-2 rounded">News</a>
                     <a href="Login.php" class="text-white bg-[#FF1D8D] hover:text-white px-3 py-2 rounded w-16" >Login</a>
                     <a href="register.php" class="text-white bg-gray-800 hover:text-teal-600 px-3 py-2 rounded w-16" >SignUp</a>
             </div>
         </div>
     </nav>
-
     <script>
         let isOpen = false;
 
@@ -54,7 +53,6 @@
             menu.style.display = isOpen ? 'flex' : 'none';
             menuIcon.setAttribute('d', isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7');
         }
-
         function handleOpen() {
             // Sign-in functionality
             alert("Sign-in clicked!");
