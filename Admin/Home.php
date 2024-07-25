@@ -122,11 +122,6 @@ $result = $conn->query($sql);
 
     <!-- Main Content -->
     <div class="flex-1 p-6 background-img">
-        <button id="toggleSidebar" class="text-zinc-900 px-4 py-2 rounded-lg mb-4 md:hidden flex items-center">
-            <i class="fas fa-bars mr-2"></i> 
-        </button>
-
-        <!-- Button to Open Modal -->
         <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
             <i class="fas fa-plus mr-2"></i> Add New User
         </button>
@@ -226,10 +221,6 @@ $result = $conn->query($sql);
 </div>
 
 <script>
-    document.getElementById('toggleSidebar').addEventListener('click', function() {
-        document.getElementById('sidebar').classList.toggle('hidden');
-    });
-
     // Open modal
     document.getElementById('openModal').addEventListener('click', function() {
         document.getElementById('userModal').classList.remove('hidden');
