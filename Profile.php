@@ -108,27 +108,6 @@ $conn->close();
             <h1 class="text-bold">About</h1>
             There are many variations of passages Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
         </p>
-        <!-- Earnings Section -->
-        <div class="mt-6">
-            <h3 class="text-lg font-semibold">Earning</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <h4 class="text-gray-600">Total Earning</h4>
-                    <p class="text-2xl font-bold">$234,12.56</p>
-                    <p class="text-green-500 mt-2">Less than last week</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <h4 class="text-gray-600">Withdraw</h4>
-                    <p class="text-2xl font-bold">$2,134.56</p>
-                    <p class="text-green-500 mt-2">More than last week</p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg shadow">
-                    <h4 class="text-gray-600">Pending</h4>
-                    <p class="text-2xl font-bold">$1,425.23</p>
-                    <p class="text-green-500 mt-2">More than last week</p>
-                </div>
-            </div>
-        </div>
         <!-- Reviews Section -->
         <div class="mt-6">
             <h3 class="text-lg font-semibold">Rating & Reviews</h3>
