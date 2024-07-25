@@ -97,8 +97,9 @@ $result = $conn->query($sql);
             background: white;
             padding: 2rem;
             border-radius: 0.5rem;
-            max-width: 500px;
+            max-width: 100%;
             width: 100%;
+            max-width: 500px;
             position: relative;
         }
     </style>
