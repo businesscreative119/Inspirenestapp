@@ -216,9 +216,11 @@ $result = $conn->query($sql);
                 ?>
             </div>
         </div>
+        <div class="pt-16">
         <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center p-10">
                     <i class="fas fa-plus mr-2"></i> Add New User
         </button>
+        </div>
     </div>
 </div>
 <!-- JavaScript for sidebar toggle and modal -->
