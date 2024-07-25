@@ -3,7 +3,7 @@ include("./php/config.php");
 
 
 if(!isset($_SESSION['valid'])){
-    header("Location: Home.php");
+    header("Location: /AdminLogin");
     exit();
 }
 
@@ -22,12 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $age = $_POST['age'];
-    $password = $_POST['password'];
-    // $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
+    // $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
 
     $sql = "INSERT INTO users (Username, Email, Age, password) VALUES ('$username', '$email', '$age', '$password')";
     if ($conn->query($sql) === TRUE) {
-        header("Location: Home.php");
+        header("Location: Admin/Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
 
     $sql = "UPDATE users SET Username='$username', Email='$email', Age='$age', password='$password' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header("Location: Home.php");
+        header("Location: Admin/Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -57,7 +57,7 @@ if (isset($_GET['delete'])) {
 
     $sql = "DELETE FROM users WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header("Location: Home.php");
+        header("Location: Admin/Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
