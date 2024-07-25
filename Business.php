@@ -26,7 +26,7 @@
                     <i class="fas fa-phone text-3xl text-green-500 mr-4"></i>
                     <div>
                         <h2 class="text-xl font-bold">Contact Us</h2>
-                        <p class="text-gray-700">Phone: +123 456 7890</p>
+                        <p class="text-gray-700">Phone: +91 7318036119</p>
                     </div>
                 </div>
                 <div class="flex items-center p-4 bg-gray-200 rounded-lg shadow-md">
@@ -40,7 +40,7 @@
                     <i class="fas fa-map-marker-alt text-3xl text-blue-500 mr-4"></i>
                     <div>
                         <h2 class="text-xl font-bold">Our Location</h2>
-                        <p class="text-gray-700">123 InspireNest Blvd, Creativity City, Imagination Land</p>
+                        <p class="text-gray-700">221202 InspireNest , Creativity City</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="flex items-center mb-4">
                         <img src="team-member-1.jpg" alt="Team Member 1" class="w-16 h-16 rounded-full mr-4">
                         <div>
-                            <h3 class="text-xl font-bold">John Doe</h3>
+                            <h3 class="text-xl font-bold">Lucky Mishra</h3>
                             <p class="text-gray-700">CEO & Founder</p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                     <div class="flex items-center mb-4">
                         <img src="team-member-2.jpg" alt="Team Member 2" class="w-16 h-16 rounded-full mr-4">
                         <div>
-                            <h3 class="text-xl font-bold">Jane Smith</h3>
+                            <h3 class="text-xl font-bold">Manibhadra Singh</h3>
                             <p class="text-gray-700">Chief Marketing Officer</p>
                         </div>
                     </div>
