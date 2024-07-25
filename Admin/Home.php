@@ -106,30 +106,6 @@ $result = $conn->query($sql);
             <i class="fas fa-bars mr-2"></i> 
         </button>
 
-        <!-- Create User Form -->
-        <div class="bg-white p-6 rounded-lg shadow-lg bg-opacity-80 mb-6">
-            <h2 class="text-2xl font-semibold mb-4">Add New User</h2>
-            <form method="POST" action="">
-                <div class="mb-4">
-                    <label class="block text-gray-700">Username</label>
-                    <input type="text" name="username" class="w-full px-3 py-2 border rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700">Email</label>
-                    <input type="email" name="email" class="w-full px-3 py-2 border rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700">Age</label>
-                    <input type="number" name="age" class="w-full px-3 py-2 border rounded" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700">Password</label>
-                    <input type="password" name="password" class="w-full px-3 py-2 border rounded" required>
-                </div>
-                <button type="submit" name="create" class="bg-blue-500 text-white px-3 py-2 rounded">Create</button>
-            </form>
-        </div>
-
         <!-- Update User Form -->
         <?php if (isset($_GET['edit'])):
             $id = $_GET['edit'];
@@ -191,6 +167,31 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
+
+
+        <!-- Create User Form -->
+        <div class="bg-white p-6 rounded-lg shadow-lg bg-opacity-80 mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Add New User</h2>
+            <form method="POST" action="">
+                <div class="mb-4">
+                    <label class="block text-gray-700">Username</label>
+                    <input type="text" name="username" class="w-full px-3 py-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Email</label>
+                    <input type="email" name="email" class="w-full px-3 py-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Age</label>
+                    <input type="number" name="age" class="w-full px-3 py-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700">Password</label>
+                    <input type="password" name="password" class="w-full px-3 py-2 border rounded" required>
+                </div>
+                <button type="submit" name="create" class="bg-blue-500 text-white px-3 py-2 rounded">Create</button>
+            </form>
+        </div>
 
 <script>
     document.getElementById('toggleSidebar').addEventListener('click', function() {
