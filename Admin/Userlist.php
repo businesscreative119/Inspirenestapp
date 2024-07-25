@@ -1,28 +1,3 @@
-<?php
-session_start(); // Ensure session is started
-
-include("./php/config.php");
-
-if (!isset($_SESSION['valid'])) {
-    header("Location: Admin/Login.php");
-    exit();
-}
-
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "InspireNest";
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch users
-$sql = "SELECT * FROM users";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +27,7 @@ $result = $conn->query($sql);
                 <i class="fas fa-home mr-3"></i> Home
             </a>
             <a href="Userlist.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
-                <i class="fas fa-user mr-3"></i> User_list
+                <i class="fas fa-user mr-3"></i> User List
             </a>
             <a href="inbox.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
                 <i class="fas fa-inbox mr-3"></i> Inbox
@@ -65,20 +40,21 @@ $result = $conn->query($sql);
 
     <!-- Main Content -->
     <div class="flex-1 p-6 background-img">
-        <button id="toggleSidebar" class=" text-zinc-900 px-4 py-2 rounded-lg mb-4 md:hidden flex items-center">
+        <button id="toggleSidebar" class="text-zinc-900 px-4 py-2 rounded-lg mb-4 md:hidden flex items-center">
             <i class="fas fa-bars mr-2"></i> 
         </button>
-            <div class="mt-6">
+        <div class="mt-6">
             <div class="px-6 py-4 border-b border-gray-200">
                 <h2 class="text-xl font-semibold text-gray-800">User List</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <img class=" rounded-full w-10 h-10" src="https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_1280.jpg" alt="Pin 1" class="rounded-lg mb-2">
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+                        $photo = htmlspecialchars($row['photo']);
                         echo "
                         <div class='bg-gray-100 p-4 rounded-lg shadow-md'>
+                            <img src='" . $photo . "' alt='User Photo' class='w-16 h-16 rounded-full mb-2'>
                             <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
@@ -89,18 +65,17 @@ $result = $conn->query($sql);
                 }
                 ?>
             </div>
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold">Boards</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h4 class="text-gray-700 font-semibold">Board 1</h4>
-                        <p class="text-gray-600">Description of Board 1...</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                        <h4 class="text-gray-700 font-semibold">Board 2</h4>
-                        <p class="text-gray-600">Description of Board 2...</p>
-                    </div>
+        </div>
+        <div class="mt-6">
+            <h3 class="text-xl font-semibold">Boards</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h4 class="text-gray-700 font-semibold">Board 1</h4>
+                    <p class="text-gray-600">Description of Board 1...</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h4 class="text-gray-700 font-semibold">Board 2</h4>
+                    <p class="text-gray-600">Description of Board 2...</p>
                 </div>
             </div>
         </div>
