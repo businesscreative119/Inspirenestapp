@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $stmt = $conn->prepare("UPDATE users SET Username=?, Email=?, Age=?, password=? WHERE id=?");
     $stmt->bind_param("ssisi", $username, $email, $age, $password, $id);
     if ($stmt->execute()) {
-        header("Location: Admin/Home.php");
+        header("Location: ./Admin/Home.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
