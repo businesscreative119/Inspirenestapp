@@ -1,3 +1,28 @@
+<?php
+session_start(); // Ensure session is started
+
+include("./php/config.php");
+
+if (!isset($_SESSION['valid'])) {
+    header("Location: Admin/Login.php");
+    exit();
+}
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "InspireNest";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch users
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,23 +72,26 @@
             <div class="px-6 py-4 border-b border-gray-200">
                 <h2 class="text-xl font-semibold text-gray-800">User List</h2>
             </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                    <img class=" rounded-full w-10 h-10" src="https://cdn.pixabay.com/photo/2024/02/15/15/46/cat-8575641_1280.jpg" alt="Pin 1" class="rounded-lg mb-2">
-                        <h4 class="text-gray-700 font-semibold">Pin Title 1</h4>
-                        <p class="text-gray-600">A short description about this pin...</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                    <img class=" rounded-full w-10 h-10" src="https://cdn.pixabay.com/photo/2024/02/27/14/00/chrysanthemum-8600210_1280.jpg" alt="Pin 1" class="rounded-lg mb-2">
-                        <h4 class="text-gray-700 font-semibold">Pin Title 2</h4>
-                        <p class="text-gray-600">A short description about this pin...</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-                    <img class=" rounded-full w-10 h-10" src="https://cdn.pixabay.com/photo/2023/11/01/11/24/path-8357201_1280.jpg" alt="Pin 1" class="rounded-lg mb-2">
-                        <h4 class="text-gray-700 font-semibold">Pin Title 3</h4>
-                        <p class="text-gray-600">A short description about this pin...</p>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <?php
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "
+                        <div class='bg-gray-100 p-4 rounded-lg shadow-md'>
+                            <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
+                            <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
+                            <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
+                            <div class='mt-2'>
+                                <a href='index.php?edit=" . htmlspecialchars($row['id']) . "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
+                                <a href='index.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
+                            </div>
+                        </div>";
+                    }
+                } else {
+                    echo "<div>No users found</div>";
+                }
+                ?>
+            </div>
             </div>
             <div class="mt-6">
                 <h3 class="text-xl font-semibold">Boards</h3>

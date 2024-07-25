@@ -201,7 +201,7 @@ $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) {
                         echo "
                         <div class='bg-gray-100 p-4 rounded-lg shadow-md'>
-                            <h4 class='text-gray-700 font-semibold'>" . htmlspecialchars($row['Username']) . "</h4>
+                            <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
                             <div class='mt-2'>
