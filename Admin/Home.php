@@ -117,7 +117,7 @@ $result = $conn->query($sql);
 
     <!-- Main Content -->
     <div class="flex-1 p-6">
-        <button id="toggleSidebar" class="bg-zinc-900 text-white px-4 py-2 rounded mb-6 flex items-center">
+        <button id="toggleSidebar" class="bg-black text-white px-4 py-2 rounded mb-6 flex items-center">
             <i class="fas fa-bars mr-2"></i> 
         </button>
         <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
