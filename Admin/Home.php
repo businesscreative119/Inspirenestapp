@@ -152,10 +152,8 @@ $result = $conn->query($sql);
                 </form>
             </div>
         </div>
+
         
-        <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
-            <i class="fas fa-plus mr-2"></i> Add New User
-        </button>
         <!-- Update User Form -->
         <?php if (isset($_GET['edit'])):
             $id = $_GET['edit'];
@@ -220,7 +218,9 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
-
+<button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
+            <i class="fas fa-plus mr-2"></i> Add New User
+        </button>
 <!-- JavaScript for sidebar toggle and modal -->
 <script>
     // Toggle sidebar
