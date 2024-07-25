@@ -77,6 +77,13 @@ $result = $conn->query($sql);
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                 <?php
+                $sql = "SELECT * FROM userdetails";
+                $result = $conn->query($sql);
+                
+                $conn->close();
+                
+                 ?>
+                <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $photo = htmlspecialchars($row['photo']);
