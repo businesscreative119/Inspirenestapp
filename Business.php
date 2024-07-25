@@ -10,7 +10,7 @@
 <body>
 <?php include "Navbar/Nav.php"; ?>
     <div class="min-h-screen p-4 md:p-8">
-        <div class="max-w-4xl mx-auto p-6 rounded-lg shadow-lg">
+        <div class="max-w-4xl mx-auto p-6 rounded-lg ">
             <h1 class="text-3xl font-bold mb-4 text-center">InspireNest Business Page</h1>
             <p class="text-gray-700 mb-6 text-center">Welcome to the InspireNest Business Page. We connect people through visual inspiration.</p>
 
