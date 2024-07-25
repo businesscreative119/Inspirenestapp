@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include("./php/config.php");
 
 // Handle Create
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
 
     $sql = "INSERT INTO users (Username, Email, Age, password) VALUES ('$username', '$email', '$age', '$password')";
     if ($conn->query($sql) === TRUE) {
-        header("Location: index.php");
+        header("Location: Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
 
     $sql = "UPDATE users SET Username='$username', Email='$email', Age='$age', password='$password' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header("Location: index.php");
+        header("Location: Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -40,7 +40,7 @@ if (isset($_GET['delete'])) {
 
     $sql = "DELETE FROM users WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header("Location: index.php");
+        header("Location: Home.php");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
