@@ -204,6 +204,10 @@ $result = $conn->query($sql);
                             <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
+                            <div class='mt-2'>
+                                <a href='index.php?edit=" . htmlspecialchars($row['id']) . "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
+                                <a href='index.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
+                            </div>
                         </div>";
                     }
                 } else {
