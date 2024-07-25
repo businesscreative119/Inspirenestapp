@@ -1,6 +1,22 @@
 <?php
 include("./php/config.php");
 
+
+if(!isset($_SESSION['valid'])){
+    header("Location: Login.php");
+    exit();
+}
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "InspireNest";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Handle Create
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $username = $_POST['username'];
