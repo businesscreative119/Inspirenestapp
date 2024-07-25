@@ -95,8 +95,17 @@ $result = $conn->query($sql);
             </div>
         </div>
         <nav class="mt-6">
-            <a href="index.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
+            <a href="Home.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
                 <i class="fas fa-home mr-3"></i> Home
+            </a>
+            <a href="Userlist.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
+                <i class="fas fa-user mr-3"></i> User_list
+            </a>
+            <a href="inbox.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
+                <i class="fas fa-inbox mr-3"></i> Inbox
+            </a>
+            <a href="Feedback.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
+                <i class="fas fa-compass mr-3"></i> Feedback
             </a>
         </nav>
     </aside>
