@@ -76,13 +76,7 @@ $result = $conn->query($sql);
                 <h2 class="text-xl font-semibold text-gray-800">User List</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                <?php
-                $sql = "SELECT * FROM userdetails";
-                $result = $conn->query($sql);
-                
-                $conn->close();
-                
-                 ?>
+            
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
@@ -99,6 +93,13 @@ $result = $conn->query($sql);
                     echo "<div>No users found</div>";
                 }
                 ?>
+                    <?php
+                $sql = "SELECT * FROM userdetails";
+                $result = $conn->query($sql);
+                
+                $conn->close();
+                
+                 ?>
             </div>
         </div>
         <div class="mt-6">
