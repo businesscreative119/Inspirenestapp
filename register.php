@@ -46,7 +46,7 @@
   <div class="w-full max-w-lg bg-zinc-100 px-10 py-8 rounded-2xl">
     <h1 class="text-3xl font-bold text-[#FF1D8D] text-center mb-6">InspireNest</h1>
     <h2 class="text-sm text-center font-semibold text-zinc-700 tracking-tight capitalize leading-tight mb-6">Create New Account</h2>
-    <form action="registration.php" method="post">
+    <form action="register.php" method="post">
       <input class="border-2 rounded-md block w-full px-3 py-2 mb-4 outline-none" type="text" name="username" id="username" placeholder="Username"  required>
       <input class="border-2 rounded-md block w-full px-3 py-2 mb-4 outline-none" type="email" name="email" id="email" placeholder="Email" required>
       <input class="border-2 rounded-md block w-full px-3 py-2 mb-4 outline-none" type="text" name="age" id="age" placeholder="Age" required>
