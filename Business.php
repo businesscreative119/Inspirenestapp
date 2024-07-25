@@ -69,7 +69,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div class="p-4 bg-gray-200 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="team-member-1.jpg" alt="Team Member 1" class="w-16 h-16 rounded-full mr-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/09/23/22/avatar-2388584_1280.png" alt="Team Member 1" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h3 class="text-xl font-bold">Lucky Mishra</h3>
                             <p class="text-gray-700">CEO & Founder</p>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="p-4 bg-gray-200 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="team-member-2.jpg" alt="Team Member 2" class="w-16 h-16 rounded-full mr-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/06/09/23/22/avatar-2388584_1280.png" alt="Team Member 2" class="w-16 h-16 rounded-full mr-4">
                         <div>
                             <h3 class="text-xl font-bold">Manibhadra Singh</h3>
                             <p class="text-gray-700">Chief Marketing Officer</p>
