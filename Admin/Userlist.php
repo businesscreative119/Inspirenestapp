@@ -19,10 +19,6 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM userdetails";
-$result = $conn->query($sql);
-
-$conn->close();
 
 
 // Fetch users
