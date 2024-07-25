@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-100">
+<body>
     <div class="min-h-screen p-4 md:p-8">
         <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
             <h1 class="text-3xl font-bold mb-4 text-center">InspireNest Business Page</h1>
