@@ -83,32 +83,6 @@ $result = $conn->query($sql);
     <title>User Management</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            max-width: 100%;
-            width: 100%;
-            max-width: 500px;
-            position: relative;
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -128,14 +102,14 @@ $result = $conn->query($sql);
     </aside>
 
     <!-- Main Content -->
-    <div class="flex-1 p-6 background-img">
+    <div class="flex-1 p-6">
         <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
             <i class="fas fa-plus mr-2"></i> Add New User
         </button>
 
         <!-- Create User Form Modal -->
-        <div id="userModal" class="modal hidden">
-            <div class="modal-content">
+        <div id="userModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative">
                 <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900">
                     <i class="fas fa-times"></i>
                 </button>
@@ -175,7 +149,7 @@ $result = $conn->query($sql);
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
         ?>
-        <div class="bg-white p-6 rounded-lg shadow-lg bg-opacity-80 mb-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full mx-auto mb-6">
             <h2 class="text-2xl font-semibold mb-4">Edit User</h2>
             <form method="POST" action="">
                 <input type="hidden" name="id" value="<?php echo htmlspecialchars($user['id']); ?>">
@@ -196,13 +170,13 @@ $result = $conn->query($sql);
                     <label class="block text-gray-700">Password (Leave empty to keep current)</label>
                     <input type="password" name="password" class="w-full px-3 py-2 border rounded">
                 </div>
-                <button type="submit" name="update" class="bg-yellow-500 text-white px-3 py-2 rounded">Update</button>
+                <button type="submit" name="update" class="bg-yellow-500 text-white px-4 py-2 rounded">Update</button>
             </form>
         </div>
         <?php endif; ?>
 
         <!-- Display Users -->
-        <div class="bg-white p-6 rounded-lg shadow-lg bg-opacity-80">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
             <div class="px-6 py-4 border-b border-gray-200">
                 <h2 class="text-xl font-semibold text-gray-800">Users List</h2>
             </div>
