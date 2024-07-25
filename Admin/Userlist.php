@@ -1,3 +1,35 @@
+<?php
+session_start(); // Ensure session is started
+
+include("./php/config.php");
+
+if (!isset($_SESSION['valid'])) {
+    header("Location: Admin/Login.php");
+    exit();
+}
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "InspireNest";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+$sql = "SELECT * FROM userdetails";
+$result = $conn->query($sql);
+
+$conn->close();
+
+
+// Fetch users
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
