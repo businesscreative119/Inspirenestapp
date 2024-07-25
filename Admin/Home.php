@@ -83,7 +83,6 @@ $result = $conn->query($sql);
     <title>User Management</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .hidden {
             display: none;
@@ -105,7 +104,7 @@ $result = $conn->query($sql);
                 <i class="fas fa-home mr-3"></i> Home
             </a>
             <a href="Userlist.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
-                <i class="fas fa-user mr-3"></i> User_list
+                <i class="fas fa-user mr-3"></i> User List
             </a>
             <a href="inbox.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-white flex items-center">
                 <i class="fas fa-inbox mr-3"></i> Inbox
@@ -118,6 +117,9 @@ $result = $conn->query($sql);
 
     <!-- Main Content -->
     <div class="flex-1 p-6">
+        <button id="toggleSidebar" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
+            <i class="fas fa-bars mr-2"></i> Toggle Sidebar
+        </button>
         <button id="openModal" class="bg-blue-500 text-white px-4 py-2 rounded mb-6 flex items-center">
             <i class="fas fa-plus mr-2"></i> Add New User
         </button>
@@ -217,14 +219,14 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
-<!-- sidebar toggel -->
+
+<!-- JavaScript for sidebar toggle and modal -->
 <script>
+    // Toggle sidebar
     document.getElementById('toggleSidebar').addEventListener('click', function() {
         document.getElementById('sidebar').classList.toggle('hidden');
     });
-</script>
 
-<script>
     // Open modal
     document.getElementById('openModal').addEventListener('click', function() {
         document.getElementById('userModal').classList.remove('hidden');
@@ -241,7 +243,6 @@ $result = $conn->query($sql);
             document.getElementById('userModal').classList.add('hidden');
         }
     });
-
 </script>
 
 </body>
