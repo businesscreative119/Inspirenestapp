@@ -83,6 +83,12 @@ $result = $conn->query($sql);
     <title>User Management</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
@@ -211,6 +217,12 @@ $result = $conn->query($sql);
         </div>
     </div>
 </div>
+<!-- sidebar toggel -->
+<script>
+    document.getElementById('toggleSidebar').addEventListener('click', function() {
+        document.getElementById('sidebar').classList.toggle('hidden');
+    });
+</script>
 
 <script>
     // Open modal
