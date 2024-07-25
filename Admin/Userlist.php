@@ -73,6 +73,7 @@ $result = $conn->query($sql);
                 <h2 class="text-xl font-semibold text-gray-800">User List</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <img class=" rounded-full w-10 h-10" src="https://cdn.pixabay.com/photo/2024/06/21/08/21/hut-8843868_1280.jpg" alt="Pin 1" class="rounded-lg mb-2">
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
@@ -81,10 +82,6 @@ $result = $conn->query($sql);
                             <h4 class='text-gray-700 font-semibold'>Name: " . htmlspecialchars($row['Username']) . "</h4>
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
-                            <div class='mt-2'>
-                                <a href='index.php?edit=" . htmlspecialchars($row['id']) . "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
-                                <a href='index.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
-                            </div>
                         </div>";
                     }
                 } else {
