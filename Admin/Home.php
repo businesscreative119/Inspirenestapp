@@ -25,13 +25,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $age = $_POST['age'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (Username, Email, Age, password) VALUES ('$username', '$email', '$age', '$password')";
-    if ($conn->query($sql) === TRUE) {
+    $stmt = $conn->prepare("INSERT INTO users (Username, Email, Age, password) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssis", $username, $email, $age, $password);
+    if ($stmt->execute()) {
         header("Location: Admin/Home.php");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+    $stmt->close();
 }
 
 // Handle Update
@@ -42,26 +44,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $age = $_POST['age'];
     $password = $_POST['password'] ? password_hash($_POST['password'], PASSWORD_DEFAULT) : $_POST['current_password'];
 
-    $sql = "UPDATE users SET Username='$username', Email='$email', Age='$age', password='$password' WHERE id=$id";
-    if ($conn->query($sql) === TRUE) {
+    $stmt = $conn->prepare("UPDATE users SET Username=?, Email=?, Age=?, password=? WHERE id=?");
+    $stmt->bind_param("ssisi", $username, $email, $age, $password, $id);
+    if ($stmt->execute()) {
         header("Location: Admin/Home.php");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+    $stmt->close();
 }
 
 // Handle Delete
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
 
-    $sql = "DELETE FROM users WHERE id=$id";
-    if ($conn->query($sql) === TRUE) {
+    $stmt = $conn->prepare("DELETE FROM users WHERE id=?");
+    $stmt->bind_param("i", $id);
+    if ($stmt->execute()) {
         header("Location: Admin/Home.php");
         exit();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+    $stmt->close();
 }
 
 // Fetch users
@@ -162,26 +168,29 @@ $result = $conn->query($sql);
         <!-- Update User Form -->
         <?php if (isset($_GET['edit'])):
             $id = $_GET['edit'];
-            $sql = "SELECT * FROM users WHERE id=$id";
-            $result = $conn->query($sql);
+            $sql = "SELECT * FROM users WHERE id=?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
             $user = $result->fetch_assoc();
         ?>
         <div class="bg-white p-6 rounded-lg shadow-lg bg-opacity-80 mb-6">
             <h2 class="text-2xl font-semibold mb-4">Edit User</h2>
             <form method="POST" action="">
-                <input type="hidden" name="id" value="<?php echo $user['id']; ?>">
-                <input type="hidden" name="current_password" value="<?php echo $user['password']; ?>">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($user['id']); ?>">
+                <input type="hidden" name="current_password" value="<?php echo htmlspecialchars($user['password']); ?>">
                 <div class="mb-4">
                     <label class="block text-gray-700">Username</label>
-                    <input type="text" name="username" class="w-full px-3 py-2 border rounded" value="<?php echo $user['Username']; ?>" required>
+                    <input type="text" name="username" class="w-full px-3 py-2 border rounded" value="<?php echo htmlspecialchars($user['Username']); ?>" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700">Email</label>
-                    <input type="email" name="email" class="w-full px-3 py-2 border rounded" value="<?php echo $user['Email']; ?>" required>
+                    <input type="email" name="email" class="w-full px-3 py-2 border rounded" value="<?php echo htmlspecialchars($user['Email']); ?>" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700">Age</label>
-                    <input type="number" name="age" class="w-full px-3 py-2 border rounded" value="<?php echo $user['Age']; ?>" required>
+                    <input type="number" name="age" class="w-full px-3 py-2 border rounded" value="<?php echo htmlspecialchars($user['Age']); ?>" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700">Password (Leave empty to keep current)</label>
@@ -203,12 +212,12 @@ $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) {
                         echo "
                         <div class='bg-gray-100 p-4 rounded-lg shadow-md'>
-                            <h4 class='text-gray-700 font-semibold'>{$row['Username']}</h4>
-                            <p class='text-gray-600'>Email: {$row['Email']}</p>
-                            <p class='text-gray-600'>Age: {$row['Age']}</p>
+                            <h4 class='text-gray-700 font-semibold'>" . htmlspecialchars($row['Username']) . "</h4>
+                            <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
+                            <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
                             <div class='mt-2'>
-                                <a href='index.php?edit={$row['id']}' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
-                                <a href='index.php?delete={$row['id']}' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
+                                <a href='index.php?edit=" . htmlspecialchars($row['id']) . "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
+                                <a href='index.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
                             </div>
                         </div>";
                     }
