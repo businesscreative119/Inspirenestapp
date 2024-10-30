@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
     $stmt = $conn->prepare("INSERT INTO users (Username, Email, Age, password) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssis", $username, $email, $age, $password);
     if ($stmt->execute()) {
-        header("Location: Admin/Home.php");
+        header("Location:Home.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update'])) {
     $stmt = $conn->prepare("UPDATE users SET Username=?, Email=?, Age=?, password=? WHERE id=?");
     $stmt->bind_param("ssisi", $username, $email, $age, $password, $id);
     if ($stmt->execute()) {
-        header("Location: ./Admin/Home.php");
+        header("Location: Home.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
@@ -62,7 +62,7 @@ if (isset($_GET['delete'])) {
     $stmt = $conn->prepare("DELETE FROM users WHERE id=?");
     $stmt->bind_param("i", $id);
     if ($stmt->execute()) {
-        header("Location: Admin/Home.php");
+        header("Location: Home.php");
         exit();
     } else {
         echo "Error: " . $stmt->error;
@@ -205,8 +205,8 @@ $result = $conn->query($sql);
                             <p class='text-gray-600'>Email: " . htmlspecialchars($row['Email']) . "</p>
                             <p class='text-gray-600'>Age: " . htmlspecialchars($row['Age']) . "</p>
                             <div class='mt-2'>
-                                <a href='index.php?edit=" . htmlspecialchars($row['id']) . "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
-                                <a href='index.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
+                                <a href='Home.php?edit=" . htmlspecialchars($row['id']). "' class='bg-yellow-500 text-white px-3 py-2 rounded'>Edit</a>
+                                <a href='Home.php?delete=" . htmlspecialchars($row['id']) . "' class='bg-red-500 text-white px-3 py-2 rounded' onclick=\"return confirm('Are you sure you want to delete this user?');\">Delete</a>
                             </div>
                         </div>";
                     }
